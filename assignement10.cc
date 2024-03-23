@@ -2,18 +2,18 @@
 using namespace std;
 class Library {
 private:
-    int isbns[3];
+    double isbns[3];
     string titles[3];
 public:
     Library() {
-        isbns[0] = 1;
+        isbns[0] = 1234567890123;
         titles[0] = "C++ BOOK";
-        isbns[1] = 2;
+        isbns[1] = 23445678901234;
         titles[1] = "MATHS";
-        isbns[2] = 3;
+        isbns[2] = 3456789012345;
         titles[2] = "NETWORKING";
     }
-    void find( int number) {
+    void find( double number) {
         bool found = false;
         for (int i = 0; i < 3; ++i) {
             if (isbns[i] == number) {
@@ -29,7 +29,7 @@ public:
 };
 int main() {
     Library library;
-    int num;
+    double num;
     cout << "Enter the ISBN of the book: ";
     cin >> num;
     library.find(num);
